@@ -382,27 +382,9 @@ class LazyLoader {
 }
 
 // ===================================
-// PARALLAX EFFECT
+// PARALLAX EFFECT - Simplified for mobile performance
 // ===================================
-class ParallaxEffect {
-    constructor() {
-        this.heroBackground = document.querySelector('.hero-background');
-        this.init();
-    }
-
-    init() {
-        if (!this.heroBackground) return;
-
-        window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
-    }
-
-    handleScroll() {
-        const scrolled = window.pageYOffset;
-        const parallaxSpeed = 0.5;
-
-        this.heroBackground.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-    }
-}
+// Parallax effect removed to improve mobile performance and reduce motion
 
 // ===================================
 // PERFORMANCE MONITORING
@@ -588,33 +570,9 @@ class MagneticButtons {
 }
 
 // ===================================
-// GRADIENT ORBS MOVEMENT
+// GRADIENT ORBS - Removed for mobile optimization
 // ===================================
-class GradientOrbs {
-    constructor() {
-        this.orbs = document.querySelectorAll('.gradient-orb');
-        this.init();
-    }
-
-    init() {
-        if (window.innerWidth <= 768) return;
-
-        document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
-    }
-
-    handleMouseMove(e) {
-        const { clientX, clientY } = e;
-        const { innerWidth, innerHeight } = window;
-
-        this.orbs.forEach((orb, index) => {
-            const speed = (index + 1) * 0.02;
-            const x = (clientX - innerWidth / 2) * speed;
-            const y = (clientY - innerHeight / 2) * speed;
-
-            orb.style.transform = `translate(${x}px, ${y}px)`;
-        });
-    }
-}
+// Gradient orbs functionality removed to improve mobile performance
 
 // ===================================
 // SECTION REVEAL ANIMATIONS
@@ -654,12 +612,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new FAQAccordion();
     new ContactFormHandler();
     new LazyLoader();
-    new ParallaxEffect();
     new StatsCounter();
     new CursorEffects();
     new ScrollIndicator();
     new MagneticButtons();
-    new GradientOrbs();
     new SectionReveal();
 
     // Performance monitoring in development
