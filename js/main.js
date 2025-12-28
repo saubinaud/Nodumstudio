@@ -65,6 +65,65 @@ function scrollToSection(sectionId) {
 }
 
 // ===================================
+// MOBILE MENU CONTROLLER
+// ===================================
+class MobileMenuController {
+    constructor() {
+        this.menuToggle = document.getElementById('mobileMenuToggle');
+        this.navMenu = document.getElementById('navMenu');
+        this.navLinks = document.querySelectorAll('.nav-link');
+        this.body = document.body;
+        this.init();
+    }
+
+    init() {
+        if (!this.menuToggle || !this.navMenu) return;
+
+        this.menuToggle.addEventListener('click', () => this.toggleMenu());
+
+        // Close menu when clicking on a link
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', () => this.closeMenu());
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!this.navMenu.contains(e.target) && !this.menuToggle.contains(e.target)) {
+                this.closeMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.closeMenu();
+            }
+        });
+    }
+
+    toggleMenu() {
+        const isActive = this.navMenu.classList.contains('active');
+        if (isActive) {
+            this.closeMenu();
+        } else {
+            this.openMenu();
+        }
+    }
+
+    openMenu() {
+        this.navMenu.classList.add('active');
+        this.menuToggle.classList.add('active');
+        this.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    }
+
+    closeMenu() {
+        this.navMenu.classList.remove('active');
+        this.menuToggle.classList.remove('active');
+        this.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// ===================================
 // NAVBAR SCROLL EFFECTS
 // ===================================
 class NavbarController {
@@ -608,6 +667,7 @@ class SectionReveal {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
     new AnimateOnScroll();
+    new MobileMenuController();
     new NavbarController();
     new FAQAccordion();
     new ContactFormHandler();
