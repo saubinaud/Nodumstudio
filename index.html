@@ -3,412 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NodumStudio - Growth Partner para negocios que quieren crecer. Analizo tu negocio, encuentro dónde estás perdiendo dinero y clientes, y construyo los sistemas que necesitas.">
-    <title>NodumStudio | Growth Partner para tu Negocio</title>
+    <meta name="description" content="NodumStudio - Convertimos negocios caóticos en sistemas que funcionan solos. 8 semanas. Resultados reales.">
+    <title>NodumStudio | Sistemas que hacen crecer tu negocio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">NodumStudio</div>
-            <button class="cta-button cta-button-nav" onclick="scrollToSection('contact')">
-                Descubre si podemos ayudarte
+            <div class="logo" data-aos="fade-right">
+                <span class="logo-text">NodumStudio</span>
+            </div>
+            <button class="cta-button cta-button-nav" onclick="scrollToSection('contact')" data-aos="fade-left">
+                Hablemos
             </button>
         </div>
     </nav>
 
-    <!-- SECCIÓN 1: HERO -->
+    <!-- Hero Section -->
     <section id="hero" class="hero">
+        <div class="hero-background"></div>
         <div class="container">
-            <h1 class="hero-headline">
-                ¿Sientes que tu negocio podría crecer más pero no sabes por dónde empezar?
-            </h1>
-            <p class="hero-subtitle">
-                Analizo tu negocio, encuentro dónde estás perdiendo dinero y clientes, y construyo los sistemas que necesitas para crecer. En 8 semanas vas a tener claridad total sobre qué está pasando y qué hacer.
-            </p>
-            <button class="cta-button cta-button-large" onclick="scrollToSection('contact')">
-                Descubre si podemos ayudarte
-            </button>
+            <div class="hero-content">
+                <span class="hero-badge" data-aos="fade-up">Transformación en 8 semanas</span>
+                <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="100">
+                    Tu negocio está perdiendo dinero.<br>
+                    <span class="highlight">Yo encuentro dónde.</span>
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Datos claros. Sistemas reales. Crecimiento medible.
+                </p>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                    <button class="cta-button cta-button-large pulse" onclick="scrollToSection('contact')">
+                        Ver cómo funciona
+                    </button>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">30-40x</span>
+                            <span class="stat-label">ROAS promedio</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: PRUEBA SOCIAL -->
+    <!-- Social Proof -->
     <section id="social-proof" class="social-proof">
         <div class="container">
-            <h3 class="section-subtitle">Negocios que ya confían en NodumStudio</h3>
+            <p class="trust-text" data-aos="fade-up">Confían en NodumStudio</p>
             <div class="clients-grid">
-                <div class="client-logo">
-                    <div class="client-placeholder">
-                        <p>AMAS Team Wolf</p>
-                        <span>Academia de Artes Marciales</span>
+                <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="client-card">
+                        <span class="client-name">AMAS Team Wolf</span>
+                        <span class="client-type">Artes Marciales</span>
+                        <div class="client-result">+267% crecimiento</div>
                     </div>
                 </div>
-                <!-- Add more client logos here -->
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 3: EL PROBLEMA -->
+    <!-- Problem Section -->
     <section id="problem" class="problem">
         <div class="container">
-            <h2 class="section-title">La mayoría de negocios no saben dónde están perdiendo dinero</h2>
-            <p class="lead-text">Tienes clientes, tienes ventas, pero sientes que algo no cuadra.</p>
-
-            <ul class="problem-list">
-                <li>¿Por qué algunos clientes se van y no sabes la razón?</li>
-                <li>¿Cuánto tiempo pierdes en WhatsApp respondiendo lo mismo una y otra vez?</li>
-                <li>¿Tienes idea de cuáles son tus mejores clientes y de dónde vienen?</li>
-                <li>¿Cuántas oportunidades de venta se te escapan porque no tienes un sistema?</li>
-            </ul>
-
-            <p class="closing-text">
-                Si gestionas tu negocio con Excel, WhatsApp y memoria, estás dejando dinero en la mesa sin saberlo.
+            <h2 class="section-title" data-aos="fade-up">El problema real</h2>
+            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                Tu negocio funciona. Pero está desorganizado.
             </p>
+
+            <div class="problem-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon">📊</div>
+                    <h3>Cero datos</h3>
+                    <p>No sabes de dónde vienen tus mejores clientes ni por qué se van los que se van.</p>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon">💬</div>
+                    <h3>Todo es manual</h3>
+                    <p>WhatsApp, Excel, memoria. Pierdes horas repitiendo lo mismo.</p>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon">❌</div>
+                    <h3>Oportunidades perdidas</h3>
+                    <p>Clientes que podrían quedarse. Ventas que se escapan. Sin sistema.</p>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon">🔍</div>
+                    <h3>Sin visibilidad</h3>
+                    <p>Sientes que podrías crecer más pero no sabes exactamente qué hacer.</p>
+                </div>
+            </div>
+
+            <div class="problem-conclusion" data-aos="fade-up" data-aos-delay="500">
+                <p>Si tu negocio funciona con Excel y WhatsApp, <strong>estás dejando dinero en la mesa.</strong></p>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 4: LA SOLUCIÓN -->
+    <!-- Solution Section -->
     <section id="solution" class="solution">
         <div class="container">
-            <h2 class="section-title">Tu negocio necesita ojos nuevos y manos que ejecuten</h2>
-            <p class="section-subtitle">No te digo qué está mal y te dejo solo. Lo encuentro y lo arreglo.</p>
-
-            <div class="services">
-                <!-- Servicio Principal -->
-                <div class="service-card featured">
-                    <h3 class="service-title">Diagnóstico + Implementación | 8 semanas</h3>
-                    <p class="service-intro">
-                        Me meto en tu negocio, analizo tus datos, encuentro los puntos ciegos, y construyo los sistemas que necesitas:
-                    </p>
-
-                    <ul class="service-features">
-                        <li>
-                            <strong>Análisis de datos:</strong> Entiendo tu negocio con números, no con suposiciones. De dónde vienen tus clientes, por qué se quedan, por qué se van.
-                        </li>
-                        <li>
-                            <strong>Web optimizada:</strong> Una web que no solo "se ve bien" sino que convierte visitantes en clientes.
-                        </li>
-                        <li>
-                            <strong>CRM y base de datos:</strong> Toda tu información de clientes organizada en un solo lugar. Nunca más Excel y WhatsApp.
-                        </li>
-                        <li>
-                            <strong>Email marketing:</strong> Comunicación automática con tus clientes. Bienvenidas, recordatorios, ofertas.
-                        </li>
-                        <li>
-                            <strong>Estrategia de crecimiento:</strong> Recomendaciones específicas basadas en tus datos reales.
-                        </li>
-                    </ul>
-
-                    <div class="service-price">
-                        <span class="price">S/. 2,500</span>
-                        <span class="price-detail">por el proyecto completo</span>
-                    </div>
-
-                    <p class="service-note">
-                        <strong>Qué NO incluye:</strong> Diseño gráfico, manejo de redes sociales, gestión de publicidad pagada.
-                    </p>
-                </div>
-
-                <!-- Servicio de Continuidad -->
-                <div class="service-card">
-                    <h3 class="service-title">Asesoría Mensual | Solo para clientes del proyecto</h3>
-                    <p class="service-intro">
-                        Una vez que implementamos todo, me quedo a tu lado:
-                    </p>
-
-                    <ul class="service-features">
-                        <li>Análisis mensual de tus datos con recomendaciones</li>
-                        <li>Respuesta a tus preguntas</li>
-                        <li>Soporte técnico si algo falla</li>
-                    </ul>
-
-                    <div class="service-price">
-                        <span class="price">S/. 800</span>
-                        <span class="price-detail">/mes</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 5: COMPARATIVA ANTES/DESPUÉS -->
-    <section id="comparison" class="comparison">
-        <div class="container">
-            <h2 class="section-title">¿Cómo se ve un negocio antes y después de trabajar conmigo?</h2>
-
-            <div class="comparison-table">
-                <div class="comparison-column before">
-                    <h3>ANTES</h3>
-                    <ul>
-                        <li>Clientes en Excel o libretas</li>
-                        <li>Comunicación por WhatsApp uno a uno</li>
-                        <li>No sabes por qué se van los clientes</li>
-                        <li>Web que "está ahí" pero no genera clientes</li>
-                        <li>Decisiones basadas en intuición</li>
-                        <li>Sientes que podrías crecer pero no sabes cómo</li>
-                    </ul>
-                </div>
-                <div class="comparison-column after">
-                    <h3>DESPUÉS</h3>
-                    <ul>
-                        <li>CRM organizado con toda la información</li>
-                        <li>Email marketing automatizado</li>
-                        <li>Datos claros de retención y rotación</li>
-                        <li>Web optimizada que convierte</li>
-                        <li>Decisiones basadas en datos reales</li>
-                        <li>Sabes exactamente qué hacer y qué priorizar</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 6: CASO DE ÉXITO -->
-    <section id="case-study" class="case-study">
-        <div class="container">
-            <h2 class="section-title">Esto es lo que pasó con AMAS Team Wolf</h2>
-            <p class="section-subtitle">Academia de artes marciales en Perú</p>
-
-            <div class="case-content">
-                <div class="case-column">
-                    <h3>ANTES:</h3>
-                    <ul>
-                        <li>Todo se gestionaba por WhatsApp y Excel</li>
-                        <li>Anuncios en Meta sin estrategia clara</li>
-                        <li>No había web ni forma de inscribirse online</li>
-                        <li>No sabían de dónde venían sus mejores clientes</li>
-                        <li>Comunicación manual con cada alumno</li>
-                    </ul>
-                </div>
-
-                <div class="case-column">
-                    <h3>QUÉ HICIMOS:</h3>
-                    <ul>
-                        <li>Implementé una web con registro de alumnos y renovaciones online</li>
-                        <li>Creé campañas de Meta optimizadas con landing page de conversión</li>
-                        <li>Construí un CRM con base de datos completa de alumnos</li>
-                        <li>Automaticé email marketing para nuevos y actuales alumnos</li>
-                        <li>Analicé los datos para entender patrones y oportunidades</li>
-                    </ul>
-                </div>
-
-                <div class="case-column">
-                    <h3>RESULTADOS:</h3>
-                    <ul class="results-list">
-                        <li><strong>ROAS de 30-40x</strong> en campañas de Meta (S/. 1,000 invertidos → S/. 30,000-40,000 en retorno)</li>
-                        <li><strong>65% de apertura</strong> en email marketing (el promedio de la industria es 20-25%)</li>
-                        <li><strong>Crecimiento de ~30 a ~110 alumnos</strong> durante el tiempo de trabajo conjunto</li>
-                        <li>Sistema completo funcionando que les ahorra horas de trabajo manual cada semana</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="testimonial-placeholder">
-                <p><em>[Espacio para testimonio del dueño de AMAS - pendiente de conseguir]</em></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 7: PROCESO -->
-    <section id="process" class="process">
-        <div class="container">
-            <h2 class="section-title">Cómo funciona</h2>
-
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Semana 1: Diagnóstico</h3>
-                    <p>
-                        Me meto en tu negocio. Reviso tus datos, tus sistemas, tus flujos. Encuentro dónde estás perdiendo clientes y dinero. Te entrego un mapa claro de qué hay que hacer.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2-6</div>
-                    <h3>Semanas 2-6: Implementación</h3>
-                    <p>
-                        Construyo lo que necesitas. Web, CRM, email marketing, base de datos, dashboards. No plantillas genéricas, sino sistemas hechos para tu negocio.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">7-8</div>
-                    <h3>Semanas 7-8: Optimización y entrega</h3>
-                    <p>
-                        Ajusto todo basándome en los primeros datos. Te enseño cómo funciona. Te entrego documentación para que puedas continuar. Sesión de cierre con recomendaciones futuras.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">+</div>
-                    <h3>Después (opcional): Asesoría mensual</h3>
-                    <p>
-                        Si quieres que siga a tu lado analizando datos y dándote recomendaciones, podemos continuar con la asesoría mensual.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 8: SOBRE MÍ -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">¿Quién está detrás de NodumStudio?</h2>
-
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <p>[Tu foto profesional]</p>
-                    </div>
-                </div>
-
-                <div class="about-text">
-                    <p class="lead">Soy Sebastien.</p>
-
-                    <p>
-                        Me apasiona entrar a un negocio, entender cómo funciona, y encontrar las oportunidades que el dueño no puede ver porque está demasiado adentro.
-                    </p>
-
-                    <p>
-                        No soy diseñador gráfico. No soy community manager. No vendo humo.
-                    </p>
-
-                    <p>
-                        Soy el tipo de persona que se mete en tus datos, encuentra dónde estás perdiendo dinero, y construye los sistemas para que dejes de perderlo.
-                    </p>
-
-                    <p>
-                        He ayudado a negocios a pasar de Excel y WhatsApp a sistemas profesionales que funcionan solos. He visto academias crecer de 30 a más de 100 alumnos. He logrado retornos de 30-40x en campañas de publicidad.
-                    </p>
-
-                    <p class="closing">
-                        Si tu negocio podría crecer más y no sabes por dónde empezar, podemos hablar.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 9: FAQ -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Preguntas frecuentes</h2>
-
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3>¿Qué tipo de negocios ayudas?</h3>
-                    <p>
-                        Academias, nidos, centros de enseñanza, peluquerías, clínicas, y negocios de servicios en general. Si tienes clientes recurrentes y sientes que podrías retener más o conseguir más, probablemente puedo ayudarte.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>¿Qué pasa si ya tengo una web?</h3>
-                    <p>
-                        La analizamos juntos. Si funciona, no la tocamos. Si hay oportunidades de mejora para convertir más, las implementamos.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>¿Necesito saber de tecnología?</h3>
-                    <p>
-                        No. Yo me encargo de todo lo técnico. Solo necesito que me des acceso a tu información y que estés dispuesto a responder preguntas sobre tu negocio.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>¿Qué pasa después de las 8 semanas?</h3>
-                    <p>
-                        Tienes un sistema funcionando y documentación para manejarlo. Si quieres que siga dándote asesoría mensual, podemos hacerlo. Si no, quedas con todo listo para continuar solo.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>¿Garantizas resultados?</h3>
-                    <p>
-                        No vendo promesas mágicas. Lo que garantizo es un proceso serio: diagnóstico real, implementación profesional, y sistemas que funcionan. Los resultados dependen también de tu negocio y tu mercado, pero mis clientes anteriores han visto mejoras claras.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>¿Por qué debería trabajar contigo y no con una agencia más grande?</h3>
-                    <p>
-                        Porque yo me meto en tu negocio. No eres un cliente más en una lista. Trabajo con pocos clientes a la vez para poder dedicarle tiempo real a cada uno. Y no solo digo qué hay que hacer, lo implemento.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 10: CTA FINAL -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">¿Listo para ver qué está frenando tu negocio?</h2>
-            <p class="section-subtitle">
-                Hablemos 15 minutos. Sin compromiso. Si puedo ayudarte, te explico cómo. Si no, te lo digo honestamente.
+            <h2 class="section-title" data-aos="fade-up">La solución</h2>
+            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                No consultorías. No reportes. <strong>Implementación real.</strong>
             </p>
 
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="services-grid">
+                <!-- Main Service -->
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-badge">Más elegido</div>
+                    <h3 class="service-title">Transformación completa</h3>
+                    <div class="service-duration">8 semanas</div>
+
+                    <ul class="service-features">
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Análisis de datos</strong>
+                                <span>Números reales, no suposiciones</span>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Web que convierte</strong>
+                                <span>No solo bonita, efectiva</span>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>CRM completo</strong>
+                                <span>Adiós Excel y WhatsApp</span>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Email automático</strong>
+                                <span>Comunicación que funciona sola</span>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Estrategia clara</strong>
+                                <span>Sabes exactamente qué hacer</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="service-price">
+                        <span class="price-currency">S/.</span>
+                        <span class="price-amount">2,500</span>
+                        <span class="price-label">inversión única</span>
+                    </div>
+
+                    <button class="cta-button cta-button-large" onclick="scrollToSection('contact')">
+                        Empezar ahora
+                    </button>
+
+                    <p class="service-disclaimer">
+                        No incluye: Diseño gráfico · Redes sociales · Publicidad pagada
+                    </p>
                 </div>
 
-                <div class="form-group">
-                    <label for="businessName">Nombre de tu negocio</label>
-                    <input type="text" id="businessName" name="businessName" required>
-                </div>
+                <!-- Continuity Service -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="service-title">Asesoría continua</h3>
+                    <div class="service-duration">Mensual</div>
 
-                <div class="form-group">
-                    <label for="businessType">Tipo de negocio</label>
-                    <select id="businessType" name="businessType" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="academia">Academia</option>
-                        <option value="nido">Nido</option>
-                        <option value="peluqueria">Peluquería</option>
-                        <option value="clinica">Clínica</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
+                    <ul class="service-features">
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>Análisis mensual</div>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>Recomendaciones tácticas</div>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>Soporte técnico</div>
+                        </li>
+                    </ul>
 
-                <div class="form-group">
-                    <label for="problem">¿Cuál es tu principal problema ahora?</label>
-                    <textarea id="problem" name="problem" rows="4" required></textarea>
-                </div>
+                    <div class="service-price">
+                        <span class="price-currency">S/.</span>
+                        <span class="price-amount">800</span>
+                        <span class="price-label">por mes</span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="whatsapp">WhatsApp</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" required>
+                    <p class="service-note">Solo para clientes del programa de 8 semanas</p>
                 </div>
-
-                <button type="submit" class="cta-button cta-button-large">
-                    Descubre si podemos ayudarte
-                </button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 11: FOOTER -->
-    <footer class="footer">
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="logo">NodumStudio</h3>
-                    <p>Growth Partner para negocios que quieren crecer</p>
+            <h2 class="section-title" data-aos="fade-up">Antes vs Después</h2>
+
+            <div class="comparison-container">
+                <div class="comparison-side before" data-aos="fade-right">
+                    <div class="comparison-header">
+                        <h3>Antes</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>Excel y libretas</li>
+                        <li>WhatsApp manual</li>
+                        <li>Clientes se van sin razón clara</li>
+                        <li>Web decorativa</li>
+                        <li>Decisiones por intuición</li>
+                        <li>Crecimiento estancado</li>
+                    </ul>
                 </div>
 
-                <div class="footer-contact">
+                <div class="comparison-divider" data-aos="fade-up">
+                    <div class="arrow-icon">→</div>
+                </div>
+
+                <div class="comparison-side after" data-aos="fade-left">
+                    <div class="comparison-header">
+                        <h3>Después</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>CRM organizado</li>
+                        <li>Email automático</li>
+                        <li>Datos de retención claros</li>
+                        <li>Web que convierte</li>
+                        <li>Decisiones con datos</li>
+                        <li>Plan de crecimiento claro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section id="case-study" class="case-study">
+        <div class="container">
+            <div class="case-header" data-aos="fade-up">
+                <span class="case-badge">Caso real</span>
+                <h2 class="section-title">AMAS Team Wolf</h2>
+                <p class="case-subtitle">Academia de artes marciales · Perú</p>
+            </div>
+
+            <div class="case-results" data-aos="fade-up" data-aos-delay="100">
+                <div class="result-card">
+                    <div class="result-number">30-40x</div>
+                    <div class="result-label">ROAS en Meta Ads</div>
+                    <div class="result-detail">S/. 1,000 → S/. 30,000-40,000</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">65%</div>
+                    <div class="result-label">Apertura email</div>
+                    <div class="result-detail">vs 20-25% promedio industria</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">+267%</div>
+                    <div class="result-label">Crecimiento</div>
+                    <div class="result-detail">30 → 110 alumnos</div>
+                </div>
+            </div>
+
+            <div class="case-timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>Problema</h4>
+                        <p>Todo por WhatsApp y Excel. Sin web. Sin datos. Ads sin estrategia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>Solución</h4>
+                        <p>Web + CRM + Email automático + Campañas optimizadas + Análisis de datos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-marker active"></div>
+                    <div class="timeline-content">
+                        <h4>Resultado</h4>
+                        <p>Sistema completo funcionando. Horas ahorradas. Crecimiento medible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Cómo funciona</h2>
+            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">8 semanas. 4 fases. Sistema completo.</p>
+
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-header">
+                        <div class="step-number">01</div>
+                        <div class="step-week">Semana 1</div>
+                    </div>
+                    <h3>Diagnóstico</h3>
+                    <p>Analizo tu negocio completo. Encuentro dónde pierdes dinero. Mapa claro de acción.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-header">
+                        <div class="step-number">02</div>
+                        <div class="step-week">Semanas 2-6</div>
+                    </div>
+                    <h3>Implementación</h3>
+                    <p>Construyo todo. Web. CRM. Email. Dashboards. Sistemas hechos para tu negocio.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-header">
+                        <div class="step-number">03</div>
+                        <div class="step-week">Semanas 7-8</div>
+                    </div>
+                    <h3>Optimización</h3>
+                    <p>Ajusto con datos reales. Te enseño todo. Documentación completa.</p>
+                </div>
+
+                <div class="process-step optional" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-header">
+                        <div class="step-number">04</div>
+                        <div class="step-week">Opcional</div>
+                    </div>
+                    <h3>Asesoría continua</h3>
+                    <p>Análisis mensual. Recomendaciones. Soporte técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <span>S</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content" data-aos="fade-left">
+                    <h2 class="section-title">Sebastien</h2>
+                    <div class="about-text">
+                        <p class="lead">Encuentro oportunidades que no ves porque estás demasiado dentro.</p>
+
+                        <p>No soy diseñador. No soy community manager. No vendo humo.</p>
+
+                        <p>Soy el que entra en tus datos, encuentra dónde pierdes dinero, y construye los sistemas para que dejes de perderlo.</p>
+
+                        <div class="about-achievements">
+                            <div class="achievement">
+                                <div class="achievement-number">30-40x</div>
+                                <div class="achievement-label">ROAS en campañas</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-number">30→110</div>
+                                <div class="achievement-label">Alumnos en academias</div>
+                            </div>
+                        </div>
+
+                        <p class="about-cta">Si tu negocio puede crecer más, <strong>hablemos.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Preguntas frecuentes</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>¿Qué negocios ayudas?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Academias, nidos, centros de enseñanza, peluquerías, clínicas. Negocios de servicios con clientes recurrentes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>¿Y si ya tengo web?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La analizamos. Si funciona, la dejamos. Si puede mejorar, la optimizamos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>¿Necesito saber de tecnología?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. Yo manejo todo lo técnico. Tú solo respondes sobre tu negocio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>¿Qué pasa después de 8 semanas?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sistema funcionando + documentación completa. Asesoría mensual opcional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h3>¿Garantizas resultados?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Garantizo proceso serio y sistemas que funcionan. Los resultados dependen de tu mercado, pero mis clientes han visto mejoras claras.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question">
+                        <h3>¿Por qué tú y no una agencia?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Porque me meto en tu negocio de verdad. Pocos clientes. Atención real. Y no solo digo qué hacer: lo implemento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>¿Listo?</h2>
+                    <p class="contact-lead">15 minutos. Sin compromiso.</p>
+                    <p>Si puedo ayudarte, te digo cómo. Si no, te lo digo honestamente.</p>
+
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Respuesta en 24h</span>
+                        </div>
+                        <div class="contact-feature">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Análisis inicial gratis</span>
+                        </div>
+                        <div class="contact-feature">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Sin letra chica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="businessName" name="businessName" placeholder="Nombre de tu negocio" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="businessType" name="businessType" required>
+                            <option value="">Tipo de negocio</option>
+                            <option value="academia">Academia</option>
+                            <option value="nido">Nido</option>
+                            <option value="peluqueria">Peluquería</option>
+                            <option value="clinica">Clínica</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="problem" name="problem" rows="3" placeholder="¿Cuál es tu principal desafío ahora?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (ej: 999999999)" required>
+                    </div>
+
+                    <button type="submit" class="cta-button cta-button-large cta-button-full">
+                        Enviar mensaje
+                    </button>
+
+                    <p class="form-note">Te contacto por WhatsApp en menos de 24 horas</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="logo">NodumStudio</h3>
+                    <p>Sistemas que hacen crecer negocios</p>
+                </div>
+
+                <div class="footer-links">
                     <h4>Contacto</h4>
-                    <p>Email: <a href="mailto:contact@nodumstudio.com">contact@nodumstudio.com</a></p>
-                    <p>WhatsApp: [Tu número]</p>
-                    <!-- <p>LinkedIn: <a href="#" target="_blank">NodumStudio</a></p> -->
-                    <!-- <p>Instagram: <a href="#" target="_blank">@nodumstudio</a></p> -->
+                    <p><a href="mailto:contact@nodumstudio.com">contact@nodumstudio.com</a></p>
+                    <p>WhatsApp: <a href="#">[Tu número]</a></p>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <!-- <a href="#" target="_blank">LinkedIn</a> -->
+                        <!-- <a href="#" target="_blank">Instagram</a> -->
+                        <p>Próximamente</p>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 NodumStudio. Growth Partner para negocios que quieren crecer.</p>
+                <p>&copy; 2025 NodumStudio. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
