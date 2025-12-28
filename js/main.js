@@ -541,6 +541,110 @@ class ScrollIndicator {
 }
 
 // ===================================
+// VIDEO LOADER
+// ===================================
+function loadVideo() {
+    // Replace 'YOUR_VIDEO_ID' with your actual YouTube video ID
+    const videoId = 'dQw4w9WgXcQ'; // Example: https://youtube.com/watch?v=dQw4w9WgXcQ
+    const iframe = document.getElementById('youtubeVideo');
+    const placeholder = document.getElementById('videoPlaceholder');
+
+    if (iframe && placeholder) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.style.display = 'block';
+        placeholder.style.display = 'none';
+    }
+}
+
+// ===================================
+// MAGNETIC BUTTON EFFECT
+// ===================================
+class MagneticButtons {
+    constructor() {
+        this.buttons = document.querySelectorAll('.magnetic');
+        this.init();
+    }
+
+    init() {
+        if (window.innerWidth <= 768) return; // Skip on mobile
+
+        this.buttons.forEach(button => {
+            button.addEventListener('mousemove', (e) => this.handleMouseMove(e, button));
+            button.addEventListener('mouseleave', () => this.handleMouseLeave(button));
+        });
+    }
+
+    handleMouseMove(e, button) {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.02)`;
+    }
+
+    handleMouseLeave(button) {
+        button.style.transform = '';
+    }
+}
+
+// ===================================
+// GRADIENT ORBS MOVEMENT
+// ===================================
+class GradientOrbs {
+    constructor() {
+        this.orbs = document.querySelectorAll('.gradient-orb');
+        this.init();
+    }
+
+    init() {
+        if (window.innerWidth <= 768) return;
+
+        document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+    }
+
+    handleMouseMove(e) {
+        const { clientX, clientY } = e;
+        const { innerWidth, innerHeight } = window;
+
+        this.orbs.forEach((orb, index) => {
+            const speed = (index + 1) * 0.02;
+            const x = (clientX - innerWidth / 2) * speed;
+            const y = (clientY - innerHeight / 2) * speed;
+
+            orb.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }
+}
+
+// ===================================
+// SECTION REVEAL ANIMATIONS
+// ===================================
+class SectionReveal {
+    constructor() {
+        this.sections = document.querySelectorAll('section');
+        this.init();
+    }
+
+    init() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        this.sections.forEach(section => {
+            section.classList.add('section-hidden');
+            observer.observe(section);
+        });
+    }
+}
+
+// ===================================
 // INITIALIZATION
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -554,6 +658,9 @@ document.addEventListener('DOMContentLoaded', () => {
     new StatsCounter();
     new CursorEffects();
     new ScrollIndicator();
+    new MagneticButtons();
+    new GradientOrbs();
+    new SectionReveal();
 
     // Performance monitoring in development
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {

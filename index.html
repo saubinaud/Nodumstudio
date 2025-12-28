@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NodumStudio - Convertimos negocios caóticos en sistemas que funcionan solos. 8 semanas. Resultados reales.">
     <title>NodumStudio | Sistemas que hacen crecer tu negocio</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium-effects.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -25,37 +26,87 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge" data-aos="fade-up">Transformación en 8 semanas</span>
+                <span class="hero-badge" data-aos="fade-up">
+                    <span class="badge-dot"></span>
+                    Transformación en 8 semanas
+                </span>
                 <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="100">
-                    Tu negocio está perdiendo dinero.<br>
-                    <span class="highlight">Yo encuentro dónde.</span>
+                    Tu negocio está<br>
+                    <span class="text-gradient">perdiendo dinero.</span><br>
+                    <span class="highlight-text">Yo encuentro dónde.</span>
                 </h1>
                 <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                    Datos claros. Sistemas reales. Crecimiento medible.
+                    Datos claros · Sistemas reales · Crecimiento medible
                 </p>
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
-                    <button class="cta-button cta-button-large pulse" onclick="scrollToSection('contact')">
-                        Ver cómo funciona
+                    <button class="cta-button cta-button-large magnetic" onclick="scrollToSection('video')">
+                        <span>Ver cómo funciona</span>
+                        <div class="button-glow"></div>
                     </button>
                     <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">30-40x</span>
-                            <span class="stat-label">ROAS promedio</span>
+                        <div class="stat-card">
+                            <div class="stat-number">30-40x</div>
+                            <div class="stat-label">ROAS promedio</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">8</span>
-                            <span class="stat-label">semanas</span>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">semanas</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll para explorar</span>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="video-header" data-aos="fade-up">
+                <span class="section-badge">Mira cómo trabajamos</span>
+                <h2 class="section-title">De caos a sistema</h2>
+                <p class="section-intro">
+                    En 2 minutos entenderás exactamente qué hacemos y cómo transformamos negocios.
+                </p>
+            </div>
+
+            <div class="video-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="video-wrapper">
+                    <!-- Replace with your YouTube video ID -->
+                    <div class="video-placeholder" id="videoPlaceholder">
+                        <div class="play-button" onclick="loadVideo()">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <div class="video-overlay"></div>
+                    </div>
+                    <!-- Video will be loaded here -->
+                    <iframe id="youtubeVideo"
+                            width="100%"
+                            height="100%"
+                            src=""
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            style="display: none;">
+                    </iframe>
+                </div>
+                <div class="video-ambient-light"></div>
+            </div>
         </div>
     </section>
 
