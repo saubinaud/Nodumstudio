@@ -229,5 +229,3 @@ Para preguntas o mejoras, contactar a través de:
 © 2025 NodumStudio. Todos los derechos reservados.
 
 ---
-
-**Desarrollado con ❤️ para NodumStudio**
