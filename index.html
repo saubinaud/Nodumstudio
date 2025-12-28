@@ -26,44 +26,59 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+        <div class="hero-bg-animated">
+            <div class="grid-overlay"></div>
+            <div class="gradient-sphere sphere-1"></div>
+            <div class="gradient-sphere sphere-2"></div>
+            <div class="floating-element el-1">+267%</div>
+            <div class="floating-element el-2">30-40x ROAS</div>
+            <div class="floating-element el-3">8 semanas</div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge" data-aos="fade-up">
-                    <span class="badge-dot"></span>
-                    Transformación en 8 semanas
-                </span>
-                <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="100">
-                    Tu negocio está<br>
-                    <span class="text-gradient">perdiendo dinero.</span><br>
-                    <span class="highlight-text">Yo encuentro dónde.</span>
+                <div class="hero-badge-wrapper" data-aos="fade-up">
+                    <span class="hero-badge-new">
+                        <span class="pulse-dot"></span>
+                        <span>Transformación completa en 8 semanas</span>
+                    </span>
+                </div>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    <span class="title-line">Tu negocio está</span>
+                    <span class="title-highlight">perdiendo dinero</span>
+                    <span class="title-line">Yo encuentro <span class="text-accent">dónde.</span></span>
                 </h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                    Datos claros · Sistemas reales · Crecimiento medible
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    Convertimos negocios caóticos en sistemas que funcionan solos.<br>
+                    <span class="description-highlight">Datos claros · Sistemas reales · Crecimiento medible</span>
                 </p>
-                <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
-                    <button class="cta-button cta-button-large magnetic" onclick="scrollToSection('video')">
-                        <span>Ver cómo funciona</span>
-                        <div class="button-glow"></div>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                    <button class="btn-primary btn-animated" onclick="scrollToSection('contact')">
+                        <span class="btn-text">Comenzar ahora</span>
+                        <span class="btn-icon">→</span>
+                        <div class="btn-bg-shine"></div>
                     </button>
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">30-40x</div>
-                            <div class="stat-label">ROAS promedio</div>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-card">
-                            <div class="stat-number">8</div>
-                            <div class="stat-label">semanas</div>
-                        </div>
+                    <button class="btn-secondary" onclick="scrollToSection('video')">
+                        <span class="play-icon">▶</span>
+                        <span>Ver cómo funciona</span>
+                    </button>
+                </div>
+                <div class="hero-metrics" data-aos="fade-up" data-aos-delay="400">
+                    <div class="metric-item">
+                        <div class="metric-value">30-40x</div>
+                        <div class="metric-label">ROAS Promedio</div>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <div class="metric-value">+267%</div>
+                        <div class="metric-label">Crecimiento</div>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <div class="metric-value">110</div>
+                        <div class="metric-label">Alumnos logrados</div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll para explorar</span>
         </div>
     </section>
 
@@ -115,6 +130,20 @@
                         <span class="client-name">AMAS Team Wolf</span>
                         <span class="client-type">Artes Marciales</span>
                         <div class="client-result">+267% crecimiento</div>
+                    </div>
+                </div>
+                <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="client-card">
+                        <span class="client-name">Academia Elite</span>
+                        <span class="client-type">Centro de Enseñanza</span>
+                        <div class="client-result">40x ROAS</div>
+                    </div>
+                </div>
+                <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="client-card">
+                        <span class="client-name">Studio Pro</span>
+                        <span class="client-type">Servicios</span>
+                        <div class="client-result">+180% ventas</div>
                     </div>
                 </div>
             </div>
@@ -420,39 +449,70 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image" data-aos="fade-right">
-                    <div class="image-frame">
+            <h2 class="section-title" data-aos="fade-up">El equipo</h2>
+            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                No vendemos humo. Implementamos sistemas reales.
+            </p>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-image">
                         <div class="image-placeholder">
                             <span>S</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="about-content" data-aos="fade-left">
-                    <h2 class="section-title">Sebastien</h2>
-                    <div class="about-text">
-                        <p class="lead">Encuentro oportunidades que no ves porque estás demasiado dentro.</p>
-
-                        <p>No soy diseñador. No soy community manager. No vendo humo.</p>
-
-                        <p>Soy el que entra en tus datos, encuentra dónde pierdes dinero, y construye los sistemas para que dejes de perderlo.</p>
-
-                        <div class="about-achievements">
-                            <div class="achievement">
-                                <div class="achievement-number">30-40x</div>
-                                <div class="achievement-label">ROAS en campañas</div>
+                    <div class="team-info">
+                        <h3 class="team-name">Sebastien</h3>
+                        <p class="team-role">Founder & Systems Architect</p>
+                        <p class="team-bio">
+                            Encuentro oportunidades que no ves porque estás demasiado dentro.
+                            Entro en tus datos, encuentro dónde pierdes dinero, y construyo los sistemas para que dejes de perderlo.
+                        </p>
+                        <div class="team-stats">
+                            <div class="stat-item-small">
+                                <span class="stat-value-small">30-40x</span>
+                                <span class="stat-label-small">ROAS</span>
                             </div>
-                            <div class="achievement">
-                                <div class="achievement-number">30→110</div>
-                                <div class="achievement-label">Alumnos en academias</div>
+                            <div class="stat-item-small">
+                                <span class="stat-value-small">+267%</span>
+                                <span class="stat-label-small">Crecimiento</span>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <p class="about-cta">Si tu negocio puede crecer más, <strong>hablemos.</strong></p>
+                <!-- Team Member 2 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-image">
+                        <div class="image-placeholder">
+                            <span>M</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">María</h3>
+                        <p class="team-role">Growth Strategist</p>
+                        <p class="team-bio">
+                            Especialista en analítica y optimización de conversiones.
+                            Transformo datos complejos en estrategias claras que generan resultados medibles.
+                        </p>
+                        <div class="team-stats">
+                            <div class="stat-item-small">
+                                <span class="stat-value-small">65%</span>
+                                <span class="stat-label-small">Email Open</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <span class="stat-value-small">+180%</span>
+                                <span class="stat-label-small">Conversión</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <p class="about-cta" data-aos="fade-up" data-aos-delay="400">
+                Si tu negocio puede crecer más, <strong>hablemos.</strong>
+            </p>
         </div>
     </section>
 
