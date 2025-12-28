@@ -18,9 +18,26 @@
             <div class="logo" data-aos="fade-right">
                 <span class="logo-text">NodumStudio</span>
             </div>
-            <button class="cta-button cta-button-nav" onclick="scrollToSection('contact')" data-aos="fade-left">
-                Hablemos
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
+
+            <!-- Navigation Menu -->
+            <div class="nav-menu" id="navMenu">
+                <a href="#video" class="nav-link" onclick="scrollToSection('video')">Cómo funciona</a>
+                <a href="#problem" class="nav-link" onclick="scrollToSection('problem')">Problema</a>
+                <a href="#solution" class="nav-link" onclick="scrollToSection('solution')">Solución</a>
+                <a href="#case-study" class="nav-link" onclick="scrollToSection('case-study')">Casos</a>
+                <a href="#process" class="nav-link" onclick="scrollToSection('process')">Proceso</a>
+                <a href="#faq" class="nav-link" onclick="scrollToSection('faq')">FAQ</a>
+                <button class="cta-button cta-button-nav" onclick="scrollToSection('contact')" data-aos="fade-left">
+                    Hablemos
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -673,7 +690,7 @@
                 <div class="footer-links">
                     <h4>Contacto</h4>
                     <p><a href="mailto:contact@nodumstudio.com">contact@nodumstudio.com</a></p>
-                    <p>WhatsApp: <a href="#">[Tu número]</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/51981811185">+51 981 811 185</a></p>
                 </div>
 
                 <div class="footer-social">
@@ -691,6 +708,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/51981811185" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.736 5.479 2.02 7.783L.076 31.155l7.652-1.944A15.906 15.906 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.95-.708-6.994-1.935l-.502-.299-5.206 1.323 1.363-5.006-.329-.522A13.233 13.233 0 012.667 16c0-7.364 5.969-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
+            <path d="M23.197 19.803c-.384-.192-2.267-1.119-2.619-1.247-.352-.128-.608-.192-.864.192-.256.384-1.024 1.247-1.248 1.503-.224.256-.448.288-.832.096-.384-.192-1.632-.6-3.104-1.92-1.152-1.024-1.92-2.288-2.144-2.672-.224-.384-.024-.592.168-.784.176-.176.384-.448.576-.672.192-.224.256-.384.384-.64.128-.256.064-.48-.032-.672-.096-.192-.864-2.08-1.184-2.848-.32-.768-.64-.64-.864-.64-.224-.016-.48-.016-.736-.016s-.672.096-.992.48c-.336.384-1.28 1.248-1.28 3.04s1.312 3.52 1.488 3.776c.192.256 2.56 3.904 6.208 5.472.864.384 1.536.608 2.064.768.864.272 1.648.24 2.272.144.688-.096 2.128-.864 2.432-1.696.304-.832.304-1.536.208-1.696-.08-.144-.336-.24-.72-.432z"/>
+        </svg>
+        <span class="whatsapp-text">Chatea</span>
+    </a>
 
     <script src="js/main.js"></script>
 </body>
