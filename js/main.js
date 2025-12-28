@@ -133,7 +133,8 @@ class FAQAccordion {
 class ContactFormHandler {
     constructor() {
         this.form = document.getElementById('contactForm');
-        this.whatsappNumber = '51999999999'; // IMPORTANT: Replace with actual number
+        this.whatsappNumber = '51981811185'; // WhatsApp de NodumStudio
+        this.webhookURL = 'https://pallium-n8n.s6hx3x.easypanel.host/webhook/registro-cliente';
         this.init();
     }
 
@@ -146,9 +147,16 @@ class ContactFormHandler {
 
     setupValidation() {
         const whatsappInput = document.getElementById('whatsapp');
+        const emailInput = document.getElementById('email');
+
         if (whatsappInput) {
             whatsappInput.addEventListener('blur', () => this.validatePhone(whatsappInput));
             whatsappInput.addEventListener('input', () => this.removeError(whatsappInput));
+        }
+
+        if (emailInput) {
+            emailInput.addEventListener('blur', () => this.validateEmail(emailInput));
+            emailInput.addEventListener('input', () => this.removeError(emailInput));
         }
     }
 
@@ -158,7 +166,20 @@ class ContactFormHandler {
         const peruPhoneRegex = /^(\+?51)?9\d{8}$/;
 
         if (phone && !peruPhoneRegex.test(cleanPhone)) {
-            this.showError(input, 'Ingresa un número válido (ej: 999999999)');
+            this.showError(input, 'Ingresa un número válido (ej: 981811185)');
+            return false;
+        }
+
+        this.removeError(input);
+        return true;
+    }
+
+    validateEmail(input) {
+        const email = input.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email && !emailRegex.test(email)) {
+            this.showError(input, 'Ingresa un correo válido');
             return false;
         }
 
@@ -187,56 +208,99 @@ class ContactFormHandler {
         }
     }
 
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault();
 
         const formData = {
-            name: document.getElementById('name').value,
-            businessName: document.getElementById('businessName').value,
-            businessType: document.getElementById('businessType').value,
-            problem: document.getElementById('problem').value,
-            whatsapp: document.getElementById('whatsapp').value
+            nombre: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            telefono: document.getElementById('whatsapp').value,
+            nombreNegocio: document.getElementById('businessName').value,
+            rubro: document.getElementById('businessType').value,
+            desafio: document.getElementById('problem').value,
+            fecha: new Date().toISOString()
         };
 
-        // Validate phone before submitting
+        // Validate phone and email before submitting
         const whatsappInput = document.getElementById('whatsapp');
+        const emailInput = document.getElementById('email');
+
         if (!this.validatePhone(whatsappInput)) {
             whatsappInput.focus();
             return;
         }
 
-        const message = this.createWhatsAppMessage(formData);
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+        if (!this.validateEmail(emailInput)) {
+            emailInput.focus();
+            return;
+        }
 
         // Show loading state
         const submitButton = this.form.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
-        submitButton.textContent = 'Redirigiendo...';
+        submitButton.textContent = 'Enviando...';
         submitButton.disabled = true;
 
-        // Open WhatsApp
-        window.open(whatsappURL, '_blank');
+        try {
+            // Send data to webhook
+            await this.sendToWebhook(formData);
 
-        // Reset form and button
-        setTimeout(() => {
+            // Create WhatsApp message
+            const message = this.createWhatsAppMessage(formData);
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+
+            // Reset form and show success
             this.form.reset();
             submitButton.textContent = originalText;
             submitButton.disabled = false;
             this.showSuccessMessage();
-        }, 1000);
+
+        } catch (error) {
+            console.error('Error al enviar formulario:', error);
+
+            // Even if webhook fails, still open WhatsApp
+            const message = this.createWhatsAppMessage(formData);
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+            this.showErrorMessage();
+        }
+    }
+
+    async sendToWebhook(data) {
+        const response = await fetch(this.webhookURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al enviar datos');
+        }
+
+        return response.json();
     }
 
     createWhatsAppMessage(data) {
-        return `¡Hola! Me llamo ${data.name}.
+        return `¡Hola! Me llamo ${data.nombre}.
 
-🏢 Negocio: ${data.businessName}
-📊 Tipo: ${data.businessType}
+📧 Email: ${data.email}
+📱 WhatsApp: ${data.telefono}
+
+🏢 Negocio: ${data.nombreNegocio}
+📊 Rubro: ${data.rubro}
 
 💡 Mi principal desafío:
-${data.problem}
-
-📱 Mi WhatsApp: ${data.whatsapp}
+${data.desafio}
 
 Quiero saber más sobre cómo NodumStudio puede ayudarme.`;
     }
@@ -253,13 +317,39 @@ Quiero saber más sobre cómo NodumStudio puede ayudarme.`;
             color: #00ff88;
             text-align: center;
             margin-top: 1rem;
+            animation: fadeIn 0.3s ease;
         `;
-        successMsg.textContent = '✓ Te contactaremos por WhatsApp en menos de 24 horas';
+        successMsg.innerHTML = '✓ Datos enviados correctamente<br><small>Te contactaremos por WhatsApp en menos de 24 horas</small>';
 
         formContainer.appendChild(successMsg);
 
         setTimeout(() => {
-            successMsg.remove();
+            successMsg.style.opacity = '0';
+            setTimeout(() => successMsg.remove(), 300);
+        }, 5000);
+    }
+
+    showErrorMessage() {
+        const formContainer = this.form.parentElement;
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'error-message-box';
+        errorMsg.style.cssText = `
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid rgba(255, 68, 68, 0.3);
+            padding: 1rem;
+            border-radius: 12px;
+            color: #ff4444;
+            text-align: center;
+            margin-top: 1rem;
+            animation: fadeIn 0.3s ease;
+        `;
+        errorMsg.innerHTML = '⚠ Hubo un problema al enviar los datos<br><small>Pero puedes continuar por WhatsApp</small>';
+
+        formContainer.appendChild(errorMsg);
+
+        setTimeout(() => {
+            errorMsg.style.opacity = '0';
+            setTimeout(() => errorMsg.remove(), 300);
         }, 5000);
     }
 }
